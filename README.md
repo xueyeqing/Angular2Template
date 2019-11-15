@@ -1,2 +1,4 @@
 # Angular2Template
-angular模板
+
+## 创建项目
+    ng new xxx
