@@ -6,8 +6,27 @@
     "Angular2Template": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:class": {
+          "spec": false
+        },
         "@schematics/angular:component": {
-          "style": "less"
+          "style": "less",
+          "spec": false
+        },
+        "@schematics/angular:directive": {
+          "spec": false
+        },
+        "@schematics/angular:guard": {
+          "spec": false
+        },
+        "@schematics/angular:module": {
+          "spec": false
+        },
+        "@schematics/angular:pipe": {
+          "spec": false
+        },
+        "@schematics/angular:service": {
+          "spec": false
         }
       },
       "root": "",
@@ -61,6 +80,21 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "test": {
+              "fileReplacements": [{
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.test.ts"
+              }],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             }
           }
         },

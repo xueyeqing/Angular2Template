@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --serve-path=Template --port=8888",
     "build": "ng build",
+    "build4test": "ng build --configuration=test",
+    "build4prod": "ng build --configuration=production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
