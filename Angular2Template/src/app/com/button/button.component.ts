@@ -17,6 +17,16 @@ export class ButtonComponent implements OnInit {
   @Input()
   iconMode: string = 'none';
 
+  @Input()
+  height: number = 40;
+
+  @Input()
+  lr: number = 40; // padding-left padding-right
+
+  @Input()
+  br: number = 4; // border-radius
+
+
   constructor() { }
 
   ngOnInit() {
