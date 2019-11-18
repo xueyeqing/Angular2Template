@@ -1,0 +1,14 @@
+<div class="com-button btn-border">
+  <a class="button-icon" *ngIf="iconMode == 'left'">
+    <i class="icon i-hover" [ngStyle]="{'background-image':'url('+baseUrl+iconUrl+')'}"></i>
+    <i class="icon is-hover" [ngStyle]="{'background-image':'url('+baseUrl+'hover-'+iconUrl+')'}"></i>
+    <i style="font-style: normal">{{text}}</i>
+  </a>
+
+  <a class="button-icon" *ngIf="iconMode == 'right'">
+    <i style="font-style: normal">{{text}}</i>
+    <i class="icon i-hover" [ngStyle]="{'background-image':'url('+baseUrl+iconUrl+')'}"></i>
+    <i class="icon is-hover" [ngStyle]="{'background-image':'url('+baseUrl+'hover-'+iconUrl+')'}"></i>
+  </a>
+
+</div>

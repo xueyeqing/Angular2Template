@@ -1,0 +1,25 @@
+.button-icon {
+  display: flex;flex-direction: row;align-items: center;
+}
+
+.button-icon .icon {
+  width: 18px;
+  height: 16px;
+  background-size: 100% 100%;
+  margin: 0 8px;
+}
+
+.com-button .icon.i-hover {
+  display: inline-block;
+}
+.com-button .icon.is-hover {
+  display: none;
+}
+.com-button:hover .icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.com-button:hover .icon.i-hover {
+  display: none;
+}
