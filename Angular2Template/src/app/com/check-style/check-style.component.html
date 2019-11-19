@@ -1,0 +1,18 @@
+<!--单选 Radio-->
+<section *ngIf="type=='radio'" class="light">
+  <label  *ngFor="let item of items" [ngStyle]="{'margin-top': tb +'px','margin-bottom': tb +'px','margin-left': lr +'px','margin-right': lr +'px'}">
+    <input type="radio" name="light" [value]="item.value" [checked]="item.check" (change)="radioChange(item)">
+    <span class="design"></span>
+    <span class="text">{{item.name}}</span>
+  </label>
+
+</section>
+
+<!--复选框 CheckBox-->
+<section *ngIf="type=='checkbox'" class="light">
+  <label *ngFor="let item of items">
+    <input type="checkbox" name="light" [value]="item.value" [checked]="item.check" (change)="checkBoxChange(item)">
+    <span class="design checkbox"></span>
+    <span class="text">{{item.name}}</span>
+  </label>
+</section>

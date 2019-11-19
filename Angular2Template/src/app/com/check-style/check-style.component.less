@@ -1,0 +1,125 @@
+/* section */
+section {
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+
+.light {
+  --primary: hsl(196, 68%, 54%);
+  --other: hsl(196, 68%, 54%);
+  background: hsl(0, 0%, 98%);
+}
+
+.dark {
+  --primary: hsl(1, 100%, 68%);
+  --other: hsl(0, 0%, 90%);
+  background: hsl(0, 0%, 10%);
+}
+
+/* label */
+label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  position: relative;
+}
+
+/* input */
+input {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* .design */
+.design {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--other);
+  border-radius: 100%;
+  margin-right: 6px;
+  position: relative;
+}
+
+.design::before,
+.design::after {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  position: absolute;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.design:before {
+  background: var(--other);
+  opacity: 0;
+  transition: .3s;
+}
+
+.design::after {
+  background: var(--primary);
+  opacity: .4;
+  transition: .6s;
+}
+
+/* .text */
+.text {
+  color: var(--other);
+  font-weight: bold;
+}
+
+/* checked state */
+input:checked + .design::before {
+  opacity: 1;
+  -webkit-transform: scale(.6);
+  transform: scale(.6);
+}
+
+/* other states */
+input:hover + .design,
+input:focus + .design {
+  border: 1px solid var(--primary);
+}
+
+input:hover + .design:before,
+input:focus + .design:before {
+  background: var(--primary);
+}
+
+input:hover ~ .text {
+  color: var(--primary);
+}
+
+input:focus + .design::after,
+input:active + .design::after {
+  opacity: .1;
+  -webkit-transform: scale(1.8);
+  transform: scale(1.8);
+}
+
+.checkbox {
+  border-radius: 4px;
+}
+
+input:focus + .checkbox::after,
+input:active + .checkbox::after {
+  opacity: .1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
