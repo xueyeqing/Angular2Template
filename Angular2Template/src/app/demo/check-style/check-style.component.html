@@ -1,9 +1,16 @@
 <div style="width: 400px;margin: 20px auto">
   <div style="margin: 20px 0">
+    <!--单选-->
     <com-check-style [items]="items1" (selChanged)="selRadioChanged($event)"></com-check-style>
   </div>
 
-  <div>
+  <div style="margin: 20px 0">
+    <!--多选-->
     <com-check-style [items]="items2" type="checkbox" (selChanged)="selCheckChanged($event)"></com-check-style>
+  </div>
+
+  <div style="margin: 20px 0">
+    <!--多选-->
+    <com-check-style [items]="items2" type="hook" (selChanged)="selCheckChanged($event)"></com-check-style>
   </div>
 </div>

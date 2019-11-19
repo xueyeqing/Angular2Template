@@ -16,3 +16,12 @@
     <span class="text">{{item.name}}</span>
   </label>
 </section>
+
+<!--复选框 CheckBox-->
+<section *ngIf="type=='hook'" class="light">
+  <label *ngFor="let item of items">
+    <input type="checkbox" name="light" [value]="item.value" [checked]="item.check" (change)="checkBoxChange(item)">
+    <span class="hook"></span>
+    <span class="text">{{item.name}}</span>
+  </label>
+</section>

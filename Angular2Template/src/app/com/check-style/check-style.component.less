@@ -46,7 +46,7 @@ input {
 .design {
   width: 16px;
   height: 16px;
-  border: 1px solid var(--other);
+  border: 1px solid var(--primary);
   border-radius: 100%;
   margin-right: 6px;
   position: relative;
@@ -67,7 +67,7 @@ input {
 }
 
 .design:before {
-  background: var(--other);
+  background: var(--primary);
   opacity: 0;
   transition: .3s;
 }
@@ -80,7 +80,7 @@ input {
 
 /* .text */
 .text {
-  color: var(--other);
+  color: var(--primary);
   font-weight: bold;
 }
 
@@ -123,3 +123,36 @@ input:active + .checkbox::after {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
+/* 勾 */
+.hook {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--primary);
+  margin-right: 6px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.hook::before {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border-style: solid;
+  border-color: var(--primary);
+  border-width: 0 2px 2px 0;
+  transform: rotateZ(45deg);
+  content: "";
+}
+
+.hook::before {
+  opacity: 0;
+}
+
+input:checked + .hook::before {
+  opacity: 1;
+}
+
+
