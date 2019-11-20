@@ -8,6 +8,8 @@ import {Router} from "@angular/router";
 })
 export class ButtonComponent implements OnInit {
 
+  showDefault: boolean = true;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -15,6 +17,10 @@ export class ButtonComponent implements OnInit {
 
   toCheckStyle() {
     this.router.navigateByUrl('/demo/checkstyle')
+  }
+
+  changeTheme() {
+    this.showDefault = !this.showDefault;
   }
 
 }
