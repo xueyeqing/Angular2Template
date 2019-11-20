@@ -1,0 +1,18 @@
+<div class="message-notice" *ngIf="visible" [ngStyle]="{'zIndex':zIndex}"
+     (mouseenter)="onEnter()"
+     (mouseleave)="onLeave()">
+  <div class="message-notice-content">
+    <div class="message-custom-content" [ngClass]="'message-' + zMessage.type">
+      <ng-container [ngSwitch]="zMessage.type">
+        <i *ngSwitchCase="'success'"></i>
+        <i *ngSwitchCase="'info'"></i>
+        <i *ngSwitchCase="'warning'"></i>
+        <i *ngSwitchCase="'error'"></i>
+        <i *ngSwitchCase="'loading'"></i>
+      </ng-container>
+      <ng-container>
+        <span [innerHTML]="zMessage.content"></span>
+      </ng-container>
+    </div>
+  </div>
+</div>

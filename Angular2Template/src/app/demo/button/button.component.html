@@ -46,7 +46,7 @@
 
   <div>
     <button class="com-button btn-3d-primary btn-primary" (click)="toCheckStyle()">toCheckStyle</button>
-    <button class="com-button btn-3d-primary btn-primary btn-square">按钮2</button>
+    <button class="com-button btn-3d-primary btn-primary btn-square" (click)="createBasicMessage()">Message</button>
     <button class="com-button btn-3d-primary btn-primary btn-rounded">按钮3</button>
     <button class="com-button btn-3d-primary btn-primary btn-box">按钮4</button>
     <button class="com-button btn-3d-primary btn-primary btn-pill">按钮5</button>
@@ -67,5 +67,9 @@
     <com-button iconUrl="download.png" iconMode="icon" [lr]="3"></com-button>
 
   </div>
+
+
+  <!--message-->
+  <com-message [zMessage]="message"></com-message>
 
 </div>
