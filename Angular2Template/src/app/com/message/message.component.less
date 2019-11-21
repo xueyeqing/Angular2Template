@@ -13,5 +13,78 @@
     border-radius: 4px;
     pointer-events: all;
     box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    .message-custom-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .message-custom-content i {
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
+    .message-success {
+      i {
+        width: 24px;height: 24px;
+        background: url("./image/success.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .message-info {
+      i {
+        width: 30px;height: 30px;
+        background: url("./image/info.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .message-warning {
+      i {
+        width: 30px;height: 30px;
+        background: url("./image/warning.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .message-error {
+      i {
+        width: 22px;height: 22px;
+        background: url("./image/error.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .message-loading {
+      i {
+        width: 24px;height: 24px;
+        background: url("./image/loading.png") no-repeat;
+        background-size: 100% 100%;
+        transition: 0.5s;
+        animation: rotate 1s linear infinite;  /*开始动画后无限循环，用来控制rotate*/
+      }
+    }
   }
 }
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform:rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform:rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+

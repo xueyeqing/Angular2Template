@@ -24,10 +24,35 @@ export class ButtonComponent implements OnInit {
     this.showDefault = !this.showDefault;
   }
 
+  /**
+   * 全局提示框
+   */
   createBasicMessage(): void {
-    this.message.success('This is a prompt message for success, and it will disappear in 5 seconds', {
-      duration: 5000
+    // success info warning error loading
+    this.message.loading('loading', {
+      duration: 1000
     });
+    setTimeout(()=>{
+      this.message.success('success', {
+        duration: 1000
+      });
+      setTimeout(()=>{
+        this.message.info('info', {
+          duration: 1000
+        });
+        setTimeout(()=>{
+          this.message.warning('warning', {
+            duration: 1000
+          });
+          setTimeout(()=>{
+            this.message.error('error', {
+              duration: 1000
+            });
+          },1000)
+        },1000)
+      },1000)
+    },1000)
+
   }
 
 }

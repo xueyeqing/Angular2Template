@@ -20,8 +20,7 @@ export class MessageComponent implements OnInit, OnDestroy {
   start;
   callback;
 
-  constructor(private message: MessageService) {
-  }
+  constructor(private message: MessageService) {}
 
   ngOnInit() {
     this.subscription = this.message.requireDialogSource$.subscribe(zMessage => {

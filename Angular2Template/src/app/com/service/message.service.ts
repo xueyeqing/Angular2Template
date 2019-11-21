@@ -7,6 +7,7 @@ export class MessageService {
 
   zIndex: number = 10000;
   private requireDialogSource = new ReplaySubject<MessageData>(1);
+  // 需要接收的信息
   requireDialogSource$ = this.requireDialogSource.asObservable();
 
   constructor() {
@@ -40,6 +41,7 @@ export class MessageService {
       }
     };
     this.zIndex++;
+    // 需要发送的信息
     this.requireDialogSource.next(resultMessage);
     return resultMessage;
   }
