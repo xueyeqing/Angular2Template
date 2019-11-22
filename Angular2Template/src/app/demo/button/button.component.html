@@ -2,18 +2,19 @@
 
   <div>
     <button class="com-button btn-border btn-box" (click)="changeTheme()">切换</button>
+    <button class="com-button btn-border btn-box" [ngStyle]="isLoading?disabled:''">不可点击</button>
   </div>
 
   <div>
-    <button class="com-button">按钮1</button>
-    <button class="com-button btn-square">按钮2</button>
-    <button class="com-button btn-rounded">按钮3</button>
+    <button class="com-button" (click)="toCheckStyle()">toCheckStyle</button>
+    <button class="com-button btn-square" (click)="createBasicMessage()">Message</button>
+    <button class="com-button btn-rounded" (click)="toDropDown()">DropDown</button>
     <button class="com-button btn-box">按钮4</button>
     <button class="com-button btn-pill">按钮5</button>
   </div>
 
   <div>
-    <button class="com-button btn-primary" disabled>按钮1</button>
+    <button class="com-button btn-primary">按钮1</button>
     <button class="com-button btn-primary btn-square">按钮2</button>
     <button class="com-button btn-primary btn-rounded">按钮3</button>
     <button class="com-button btn-primary btn-box">按钮4</button>
@@ -21,7 +22,7 @@
   </div>
 
   <div>
-    <button class="com-button btn-border" disabled>按钮1</button>
+    <button class="com-button btn-border">按钮1</button>
     <button class="com-button btn-border btn-square">按钮2</button>
     <button class="com-button btn-border btn-rounded">按钮3</button>
     <button class="com-button btn-border btn-box">按钮4</button>
@@ -29,7 +30,7 @@
   </div>
 
   <div>
-    <button class="com-button btn-primary btn-glow" disabled>按钮1</button>
+    <button class="com-button btn-primary btn-glow">按钮1</button>
     <button class="com-button btn-primary btn-glow btn-square">按钮2</button>
     <button class="com-button btn-primary btn-glow btn-rounded">按钮3</button>
     <button class="com-button btn-primary btn-glow btn-box">按钮4</button>
@@ -37,7 +38,7 @@
   </div>
 
   <div>
-    <button class="com-button btn-primary btn-glow" disabled>按钮1</button>
+    <button class="com-button btn-primary btn-glow">按钮1</button>
     <button class="com-button btn-primary btn-glow btn-square">按钮2</button>
     <button class="com-button btn-primary btn-glow btn-rounded">按钮3</button>
     <button class="com-button btn-primary btn-glow btn-box">按钮4</button>
@@ -45,8 +46,8 @@
   </div>
 
   <div>
-    <button class="com-button btn-3d-primary btn-primary" (click)="toCheckStyle()">toCheckStyle</button>
-    <button class="com-button btn-3d-primary btn-primary btn-square" (click)="createBasicMessage()">Message</button>
+    <button class="com-button btn-3d-primary btn-primary">按钮1</button>
+    <button class="com-button btn-3d-primary btn-primary btn-square">按钮2</button>
     <button class="com-button btn-3d-primary btn-primary btn-rounded">按钮3</button>
     <button class="com-button btn-3d-primary btn-primary btn-box">按钮4</button>
     <button class="com-button btn-3d-primary btn-primary btn-pill">按钮5</button>

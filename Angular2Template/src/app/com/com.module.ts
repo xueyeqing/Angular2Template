@@ -5,6 +5,7 @@ import {FormsModule} from "@angular/forms";
 import {ButtonComponent} from './button/button.component';
 import {CheckStyleComponent} from "./check-style/check-style.component";
 import { MessageComponent } from './message/message.component';
+import { DropDownComponent } from './drop-down/drop-down.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import { MessageComponent } from './message/message.component';
     ClickOutsideDirective,
     ButtonComponent,
     CheckStyleComponent,
-    MessageComponent
+    MessageComponent,
+    DropDownComponent
   ],
   exports: [
     ClickOutsideDirective,
     ButtonComponent,
     CheckStyleComponent,
-    MessageComponent
+    MessageComponent,
+    DropDownComponent
   ]
 })
 export class ComModule {

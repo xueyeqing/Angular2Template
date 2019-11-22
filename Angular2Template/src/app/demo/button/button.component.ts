@@ -10,6 +10,7 @@ import {MessageService} from "../../com/service/message.service";
 export class ButtonComponent implements OnInit {
 
   showDefault: boolean = true;
+  isLoading: boolean = true;
 
   constructor(private router: Router,private message: MessageService) { }
 
@@ -18,6 +19,10 @@ export class ButtonComponent implements OnInit {
 
   toCheckStyle() {
     this.router.navigateByUrl('/demo/checkstyle')
+  }
+
+  toDropDown() {
+    this.router.navigateByUrl('/demo/dropdown')
   }
 
   changeTheme() {
