@@ -2,14 +2,14 @@
 
   <div>
     <button class="com-button btn-border btn-box" (click)="changeTheme()">切换</button>
-    <button class="com-button btn-border btn-box" [ngStyle]="isLoading?disabled:''">不可点击</button>
+    <button class="com-button btn-border btn-box" [disabled]="isLoading?'disabled':''">不可点击</button>
   </div>
 
   <div>
     <button class="com-button" (click)="toCheckStyle()">toCheckStyle</button>
     <button class="com-button btn-square" (click)="createBasicMessage()">Message</button>
     <button class="com-button btn-rounded" (click)="toDropDown()">DropDown</button>
-    <button class="com-button btn-box">按钮4</button>
+    <button class="com-button btn-box" (click)="toPager()">分页</button>
     <button class="com-button btn-pill">按钮5</button>
   </div>
 

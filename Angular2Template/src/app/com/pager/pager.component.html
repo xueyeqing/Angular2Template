@@ -1,0 +1,17 @@
+<div class="page_nav_box">
+  <ul>
+    <a [class.disabled]="true"
+       [ngStyle]="{'border': 'none', 'font-size': '14px'}">当前{{realPageCount}}条，共{{totalCount}}条</a>
+    <a href="javascript:void(0);" class="pageTags" [class.disabled]="pageIndex==1" (click)="page(pageIndex-1)"
+       [ngStyle]="{'min-width':'60px', 'border-top-left-radius': '4px', 'border-bottom-left-radius': '4px'}">上一页</a>
+    <a href="javascript:void(0);" class="pageTags" *ngFor="let pageLink of pageLinks"
+       [class.disabled]="pageIndex==pageLink||pageLink=='...'" [ngClass]="{'on':pageIndex==pageLink}"
+       (click)="page(pageLink)">{{pageLink}}</a>
+    <a href="javascript:void(0);" class="pageTags" [class.disabled]="pageIndex==pageCount" (click)="page(pageIndex+1)"
+       [ngStyle]="{'min-width':'55px', 'border-top-right-radius': '4px', 'border-bottom-right-radius': '4px'}">下一页</a>
+    <a [class.disabled]="true" [ngStyle]="{'border': 'none', 'font-size': '14px'}">第{{pageIndex}}页/共{{pageCount}}页</a>
+    <input class="numberInput" [(ngModel)]="inputPageIndex"/>
+    <a href="javascript:void(0);" (click)="skip()" class="pageTags"
+       [ngStyle]="{'min-width':'60px','border-radius': '4px'}">跳转</a>
+  </ul>
+</div>

@@ -6,6 +6,7 @@ import {ButtonComponent} from './button/button.component';
 import {CheckStyleComponent} from "./check-style/check-style.component";
 import { MessageComponent } from './message/message.component';
 import { DropDownComponent } from './drop-down/drop-down.component';
+import {PagerComponent} from "./pager/pager.component";
 
 @NgModule({
   imports: [
@@ -17,14 +18,16 @@ import { DropDownComponent } from './drop-down/drop-down.component';
     ButtonComponent,
     CheckStyleComponent,
     MessageComponent,
-    DropDownComponent
+    DropDownComponent,
+    PagerComponent
   ],
   exports: [
     ClickOutsideDirective,
     ButtonComponent,
     CheckStyleComponent,
     MessageComponent,
-    DropDownComponent
+    DropDownComponent,
+    PagerComponent
   ]
 })
 export class ComModule {

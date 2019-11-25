@@ -25,6 +25,10 @@ export class ButtonComponent implements OnInit {
     this.router.navigateByUrl('/demo/dropdown')
   }
 
+  toPager() {
+    this.router.navigateByUrl('/demo/pager')
+  }
+
   changeTheme() {
     this.showDefault = !this.showDefault;
   }
