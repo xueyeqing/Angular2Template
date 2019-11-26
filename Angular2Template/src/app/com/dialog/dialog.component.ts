@@ -13,7 +13,7 @@ export class DialogComponent implements OnInit, OnDestroy {
 
   @Input() key: string; // 标识当前对话框的唯一性
   @Input() width: number = 450;
-  @Input() height: number = 180;
+  @Input() height: number = 190;
   @Input() visible: boolean;
   @Input() title: string; // 对话框标题
   @Input() opacity = .5;
