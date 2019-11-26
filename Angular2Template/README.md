@@ -32,6 +32,27 @@
     组件中发送 this.message.send({a:'1',b:'2'})
     组件中接收 this.message.get().subscribe((res)=>{})
     ```
+    
+## 3、全局对话框（Dialog）实现方式同Message
+    ```
+      <com-dialog key="one">
+        <span>自定义内容</span>
+      </com-dialog>
+      
+      this.dialog.confirm({
+          key: 'one', // 必填项
+          title: "提示1",
+          opacity: .5,
+          okVisible: true,
+          offVisible: true,
+          accept: () => {
+            this.dialog.close();
+          },
+          reject: () => {
+            this.dialog.close();
+          }
+      });
+    ```    
   
 ## 实例：  
 - http://localhost:8888/Template/demo/button  

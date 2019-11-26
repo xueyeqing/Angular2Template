@@ -29,6 +29,10 @@ export class ButtonComponent implements OnInit {
     this.router.navigateByUrl('/demo/pager')
   }
 
+  toDialog() {
+    this.router.navigateByUrl('/demo/dialog')
+  }
+
   changeTheme() {
     this.showDefault = !this.showDefault;
   }

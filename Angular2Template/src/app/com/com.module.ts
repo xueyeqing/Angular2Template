@@ -4,9 +4,10 @@ import {ClickOutsideDirective} from './click-outside.directive';
 import {FormsModule} from "@angular/forms";
 import {ButtonComponent} from './button/button.component';
 import {CheckStyleComponent} from "./check-style/check-style.component";
-import { MessageComponent } from './message/message.component';
-import { DropDownComponent } from './drop-down/drop-down.component';
+import {MessageComponent} from './message/message.component';
+import {DropDownComponent} from './drop-down/drop-down.component';
 import {PagerComponent} from "./pager/pager.component";
+import {DialogComponent} from './dialog/dialog.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {PagerComponent} from "./pager/pager.component";
     CheckStyleComponent,
     MessageComponent,
     DropDownComponent,
-    PagerComponent
+    PagerComponent,
+    DialogComponent
   ],
   exports: [
     ClickOutsideDirective,
@@ -27,7 +29,8 @@ import {PagerComponent} from "./pager/pager.component";
     CheckStyleComponent,
     MessageComponent,
     DropDownComponent,
-    PagerComponent
+    PagerComponent,
+    DialogComponent
   ]
 })
 export class ComModule {

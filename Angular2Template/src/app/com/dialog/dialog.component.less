@@ -1,0 +1,98 @@
+@import "../../../assets/style/comm.less";
+
+@border-radius: 6px;
+@font-size: 15px;
+
+.dialog-model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  .dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    margin: auto;
+    background: #fff;
+    border-radius: @border-radius;
+    .title {
+      position: relative;
+      text-align: center;
+      height: 45px;
+      line-height: 45px;
+      background: var(--primary);
+      color: #fff;
+      border-top-left-radius: @border-radius;
+      border-top-right-radius: @border-radius;
+      font-size: @font-size;
+      .close {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url("./image/close.png") no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+        padding: 4px;
+      }
+    }
+    .content {
+      width: 100%;
+      min-height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: @font-size;
+      overflow-y: auto;
+    }
+    .footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 20px 0;
+      span {
+        display: inline-block;
+        background: var(--primary);
+        color: #fff;
+        padding: 6px 20px;
+        border-radius: @border-radius;
+        cursor: pointer;
+        font-size: @font-size;
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: var(--border-color-default);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* 滚动条样式End */

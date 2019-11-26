@@ -7,9 +7,10 @@ import {FormsModule} from "@angular/forms";
 import {CheckStyleComponent} from './check-style/check-style.component';
 import {DropDownComponent} from './drop-down/drop-down.component';
 import { PagerComponent } from './pager/pager.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
-  declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent],
+  declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent],
   imports: [
     CommonModule,
     DemoRoutingModule,

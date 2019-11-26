@@ -1,0 +1,21 @@
+<div class="dialog-model" *ngIf="visible" [ngStyle]="{'background':'rgba(0,0,0,+'+opacity+')'}">
+  <div class="dialog" [ngStyle]="{'height':height+'px','width':width+'px'}">
+    <!--头部-->
+    <div *ngIf="title" class="title">
+      <span>{{title}}</span>
+      <i *ngIf="close" class="close" (click)="reject()"></i>
+    </div>
+
+    <!--内容部分-->
+    <div class="content"
+         [ngStyle]="{'max-height':(height-45)+'px','margin-top': marginTop+'px','margin-bottom': marginTop+'px'}">
+      <ng-content></ng-content>
+    </div>
+
+    <!--底部按钮-->
+    <div class="footer">
+      <span *ngIf="dialog.okVisible" (click)="accept()">{{dialog.okLabel?dialog.okLabel:'确定'}}</span>
+      <span *ngIf="dialog.offVisible" (click)="reject()">{{dialog.offLabel?dialog.offLabel:'取消'}}</span>
+    </div>
+  </div>
+</div>
