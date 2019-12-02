@@ -54,5 +54,14 @@
       });
     ```    
   
+
+## 4、管道（Pipe）
+- 身份证  固话+手机号 带*显示
+```html
+  <span>{{'340555199110268888' | idNumber}}</span>
+  <span>{{'' | phone}}</span>
+```
+
+
 ## 实例：  
 - http://localhost:8888/Template/demo/button  

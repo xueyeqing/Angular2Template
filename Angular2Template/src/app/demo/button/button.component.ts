@@ -33,6 +33,10 @@ export class ButtonComponent implements OnInit {
     this.router.navigateByUrl('/demo/dialog')
   }
 
+  toPipe() {
+    this.router.navigateByUrl('/demo/pipe')
+  }
+
   changeTheme() {
     this.showDefault = !this.showDefault;
   }

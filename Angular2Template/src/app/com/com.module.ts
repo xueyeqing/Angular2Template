@@ -8,6 +8,8 @@ import {MessageComponent} from './message/message.component';
 import {DropDownComponent} from './drop-down/drop-down.component';
 import {PagerComponent} from "./pager/pager.component";
 import {DialogComponent} from './dialog/dialog.component';
+import { IdNumberPipe } from './pipe/id-number.pipe';
+import { PhonePipe } from './pipe/phone.pipe';
 
 @NgModule({
   imports: [
@@ -21,7 +23,9 @@ import {DialogComponent} from './dialog/dialog.component';
     MessageComponent,
     DropDownComponent,
     PagerComponent,
-    DialogComponent
+    DialogComponent,
+    IdNumberPipe,
+    PhonePipe
   ],
   exports: [
     ClickOutsideDirective,
@@ -30,7 +34,9 @@ import {DialogComponent} from './dialog/dialog.component';
     MessageComponent,
     DropDownComponent,
     PagerComponent,
-    DialogComponent
+    DialogComponent,
+    IdNumberPipe,
+    PhonePipe
   ]
 })
 export class ComModule {

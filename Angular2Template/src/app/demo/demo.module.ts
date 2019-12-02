@@ -8,9 +8,10 @@ import {CheckStyleComponent} from './check-style/check-style.component';
 import {DropDownComponent} from './drop-down/drop-down.component';
 import { PagerComponent } from './pager/pager.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
-  declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent],
+  declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent, PipeComponent],
   imports: [
     CommonModule,
     DemoRoutingModule,

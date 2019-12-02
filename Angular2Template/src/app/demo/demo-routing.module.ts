@@ -6,6 +6,7 @@ import {CheckStyleComponent} from "./check-style/check-style.component";
 import {DropDownComponent} from "./drop-down/drop-down.component";
 import {PagerComponent} from "./pager/pager.component";
 import {DialogComponent} from "./dialog/dialog.component";
+import {PipeComponent} from "./pipe/pipe.component";
 
 const routes: Routes = [
   { path: '', component: ButtonComponent, data: { title: 'demo-button' }, canActivate: [SetTitleGuard] },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'dropdown', component: DropDownComponent, data: { title: 'demo-dropdown' }, canActivate: [SetTitleGuard] },
   { path: 'pager', component: PagerComponent, data: { title: 'demo-pager' }, canActivate: [SetTitleGuard] },
   { path: 'dialog', component: DialogComponent, data: { title: 'demo-dialog' }, canActivate: [SetTitleGuard] },
+  { path: 'pipe', component: PipeComponent, data: { title: 'demo-pipe' }, canActivate: [SetTitleGuard] },
 ];
 
 @NgModule({
