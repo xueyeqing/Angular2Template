@@ -18,4 +18,37 @@
     <span>{{'18355184567' | phone}}</span>
   </p>
 
+  <p>
+    <span>时间:</span>
+    <span>{{ today | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+  </p>
+
+  <p>
+    <span>时间:</span>
+    <span>{{ 1575594423343 | date:'yyyy-MM-dd HH:mm'}}</span>
+  </p>
+
+  <p>
+    <span style="display: block">小数:参数格式为(最少整数位数).(最少小数位数-最多小数位数)</span>
+    <span>{{ 3.1415926 | number:'1.2-4'}}</span>
+    <span>{{ 3.1415926 | number:'1.2-3'}}</span>
+    <span>{{ 3.1415926 | number:'2.2-2'}}</span>
+  </p>
+
+  <p>
+    <span>大小写转换:</span>
+    <span>{{ 'abc' | uppercase}}</span>
+    <span>{{ 'abc' | lowercase}}</span>
+  </p>
+
+  <p>
+    <span>slice:</span>
+    <span>{{ 'happy' | slice:0:3}}</span>
+  </p>
+
+  <p>
+    <span>字符过长显示...</span>
+    <span>{{ strNum | stringNum:15}}</span>
+  </p>
+
 </div>
