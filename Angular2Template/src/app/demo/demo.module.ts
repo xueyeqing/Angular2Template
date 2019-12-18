@@ -6,12 +6,13 @@ import {ComModule} from "../com/com.module";
 import {FormsModule} from "@angular/forms";
 import {CheckStyleComponent} from './check-style/check-style.component';
 import {DropDownComponent} from './drop-down/drop-down.component';
-import { PagerComponent } from './pager/pager.component';
-import { DialogComponent } from './dialog/dialog.component';
-import { PipeComponent } from './pipe/pipe.component';
+import {PagerComponent} from './pager/pager.component';
+import {DialogComponent} from './dialog/dialog.component';
+import {PipeComponent} from './pipe/pipe.component';
+import {AnimationComponent} from './animation/animation.component';
 
 @NgModule({
-  declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent, PipeComponent],
+  declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent, PipeComponent, AnimationComponent],
   imports: [
     CommonModule,
     DemoRoutingModule,

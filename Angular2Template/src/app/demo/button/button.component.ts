@@ -37,6 +37,10 @@ export class ButtonComponent implements OnInit {
     this.router.navigateByUrl('/demo/pipe')
   }
 
+  toAnimation() {
+    this.router.navigateByUrl('/demo/animation')
+  }
+
   changeTheme() {
     this.showDefault = !this.showDefault;
   }

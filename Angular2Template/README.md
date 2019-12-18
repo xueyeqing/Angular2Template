@@ -60,7 +60,24 @@
 ```html
   <span>{{'340555199110268888' | idNumber}}</span>
   <span>{{'' | phone}}</span>
+  
+  <span>{{ 1575594423343 | date:'yyyy-MM-dd HH:mm'}}</span>
+  <span>{{ 3.1415926 | number:'1.2-4'}}</span>
+  <span>{{ 'abc' | uppercase}}</span>
+  <span>{{ 'abc' | lowercase}}</span>
+      
+  <span>{{ 'happy' | slice:0:3}}</span>
+  <span>{{ strNum | stringNum:15}}</span>
 ```
+
+## 5、animation 动画
+- trigger 触发器 负责定义各种 state 和它们之间变化来变化去 transition
+- state 通过改变状态(state)来触发(trigger)动画(animate)
+- transition 负责定义各种 state 之间错综复杂的转换关系
+
+      void 表示空状态下   
+      * 表示任何状态
+
 
 
 ## 实例：  
