@@ -1,4 +1,4 @@
-import {animate, state, style, transition, trigger} from "@angular/animations";
+import {animate, group, state, style, transition, trigger} from "@angular/animations";
 
 /**
  * 路由转场动画
@@ -20,10 +20,6 @@ export const slideToRightAnimation =
       style({ transform: 'translate3d(0,0,0)' }),
       animate('.5s ease-in-out', style({ transform: 'translate3d(100%,0,0)' }))
     ])
-    // state('*', style({opacity: 1, transform: 'translateX(0)'})),
-    // transition(':enter', [style({opacity: 0, transform: 'translateX(-100%)'}), animate('0.4s ease-in')]),
-    // transition(':leave', [animate('0.6s ease-out', style({opacity: 0, transform: 'translateY(100%)'}))
-    // ])
   ]);
 
 /**
@@ -37,3 +33,14 @@ export const visibilityAnimation =
     transition('shown => hidden', animate('600ms')),
     transition('hidden => shown', animate('300ms')),
   ]);
+
+/**
+ *
+ * @type {AnimationTriggerMetadata}
+ */
+export const cardAnim = trigger('card', [
+  state('out', style({transform: 'scale(1)', 'box-shadow': 'none', 'background': 'deepskyblue'})),
+  state('hover', style({transform: 'scale(1.1)', 'box-shadow': '3px 3px 5px #ccc', 'background': '#FF34B3'})),
+  transition('out => hover', animate('100ms ease-in')),
+  transition('hover => out', animate('100ms ease-out'))
+]);

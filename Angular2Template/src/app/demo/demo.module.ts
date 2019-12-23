@@ -10,9 +10,10 @@ import {PagerComponent} from './pager/pager.component';
 import {DialogComponent} from './dialog/dialog.component';
 import {PipeComponent} from './pipe/pipe.component';
 import {AnimationComponent} from './animation/animation.component';
+import {ProjectItemComponent} from "./project-item/project-item.component";
 
 @NgModule({
-  declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent, PipeComponent, AnimationComponent],
+  declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent, PipeComponent, AnimationComponent,ProjectItemComponent],
   imports: [
     CommonModule,
     DemoRoutingModule,
