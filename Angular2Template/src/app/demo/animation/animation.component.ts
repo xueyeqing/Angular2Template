@@ -1,12 +1,12 @@
 import {Component, HostBinding, HostListener, OnInit} from '@angular/core';
 
-import {slideToRightAnimation, cardAnim, visibilityAnimation} from '../../com/animation/animation';  //引入滑动页面的效果
+import {slideToRightAnimation, cardAnim, visibilityAnimation, countAnimation} from '../../com/animation/animation';  //引入滑动页面的效果
 
 @Component({
   selector: 'demo-animation',
   templateUrl: './animation.component.html',
   styleUrls: ['./animation.component.less'],
-  animations: [ slideToRightAnimation,visibilityAnimation,cardAnim ]
+  animations: [slideToRightAnimation, visibilityAnimation, cardAnim, countAnimation]
 })
 export class AnimationComponent implements OnInit {
 
@@ -14,9 +14,10 @@ export class AnimationComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
 
   visibility = 'shown';
-  isVisible : boolean = true;
+  isVisible: boolean = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -27,6 +28,7 @@ export class AnimationComponent implements OnInit {
   }
 
   cardState = 'out';
+
   // HostListener 是属性装饰器，用来为宿主元素添加事件监听。
   @HostListener('mouseenter', ['$event.target'])
   onMouseEnter(target) {

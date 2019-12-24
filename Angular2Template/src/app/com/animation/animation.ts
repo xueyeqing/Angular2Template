@@ -1,4 +1,6 @@
-import {animate, group, state, style, transition, trigger} from "@angular/animations";
+import {animate, group, keyframes, query, state, style, transition, trigger} from "@angular/animations";
+
+const ELASTIC_BEZIER = 'cubic-bezier(.26,1.96,.58,.61)';
 
 /**
  * 路由转场动画
@@ -39,8 +41,44 @@ export const visibilityAnimation =
  * @type {AnimationTriggerMetadata}
  */
 export const cardAnim = trigger('card', [
-  state('out', style({transform: 'scale(1)', 'box-shadow': 'none', 'background': 'deepskyblue'})),
+  state('out', style({transform: 'scale(1)', 'box-shadow': 'none', 'background': '#3BAFDA'})),
   state('hover', style({transform: 'scale(1.1)', 'box-shadow': '3px 3px 5px #ccc', 'background': '#FF34B3'})),
   transition('out => hover', animate('100ms ease-in')),
   transition('hover => out', animate('100ms ease-out'))
 ]);
+
+/**
+ * 购物车数量增加动画
+ * @type {AnimationTriggerMetadata}
+ */
+export const countAnimation = trigger('count',[
+  transition('void => current',[
+    animate('400ms 150ms', keyframes([
+      style({opacity: 0.6,transform:'translateY(0)',offset:0}),
+      style({opacity: 0.3,transform:'translateY(-15px)',offset:0.5}),
+      style({opacity: 0,transform:'translateY(-30px)',offset:1}),
+    ]))
+  ]),
+  transition('void => last',[
+    animate(250,keyframes([
+      style({ opacity: 0, transform: 'translateY(100%)', offset: 0 }),
+      style({ opacity: 0.3, transform: 'translateY(15px)', offset: 0.5 }),
+      style({ opacity: 0.8, transform: 'translateY(0)', offset: 1.0 })
+    ]))
+  ])
+]);
+
+export const loadingAnimation = trigger('loadingAnimation', [
+  transition(':enter', [
+    query('.text', [
+      style({ marginTop: '-200px' }),
+      animate('1500ms ' + ELASTIC_BEZIER, style({ marginTop: '0px' }))
+    ])
+  ]),
+  transition(':leave', [
+    query('.text', [
+      animate('800ms ease-out', style({ opacity: '0' }))
+    ]),
+    animate('300ms', style({ opacity: 0 }))
+  ])
+])

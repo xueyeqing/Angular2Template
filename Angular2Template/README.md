@@ -79,6 +79,10 @@
       * 表示任何状态
 
 
-
+## 6、防二次重复点击 （指令）
+> ### app => com => debounce-click.directive.ts
+```html
+<span  appDebounceClick (debounceClick)="xxx">xxx</span>
+```
 ## 实例：  
 - http://localhost:8888/Template/demo/button  

@@ -15,10 +15,10 @@ import {DialogService} from "./com/service/dialog.service";
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     CommonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [MessageService, DialogService],
   bootstrap: [AppComponent]
