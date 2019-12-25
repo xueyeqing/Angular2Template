@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --serve-path=Template --port=8888",
+    "start": "ng serve --serve-path=Template --port=8888 --open",
     "build": "ng build",
     "build4test": "ng build --configuration=test",
     "build4prod": "ng build --configuration=production",

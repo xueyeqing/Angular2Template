@@ -11,14 +11,17 @@ import {AnimationComponent} from "./animation/animation.component";
 import {IndexComponent} from "./index/index.component";
 
 const routes: Routes = [
-  { path: '', component: IndexComponent, data: { title: 'index' }, canActivate: [SetTitleGuard] },
-  { path: 'button', component: ButtonComponent, data: { title: 'demo-button' }, canActivate: [SetTitleGuard] },
-  { path: 'checkstyle', component: CheckStyleComponent, data: { title: 'demo-check-style' }, canActivate: [SetTitleGuard] },
-  { path: 'dropdown', component: DropDownComponent, data: { title: 'demo-dropdown' }, canActivate: [SetTitleGuard] },
-  { path: 'pager', component: PagerComponent, data: { title: 'demo-pager' }, canActivate: [SetTitleGuard] },
-  { path: 'dialog', component: DialogComponent, data: { title: 'demo-dialog' }, canActivate: [SetTitleGuard] },
-  { path: 'pipe', component: PipeComponent, data: { title: 'demo-pipe' }, canActivate: [SetTitleGuard] },
-  { path: 'animation', component: AnimationComponent, data: { title: 'animation' }, canActivate: [SetTitleGuard] },
+  {
+    path: '', component: IndexComponent, children: [
+      { path: 'button', component: ButtonComponent, data: { title: 'demo-button' }, canActivate: [SetTitleGuard] },
+      { path: 'checkstyle', component: CheckStyleComponent, data: { title: 'demo-check-style' }, canActivate: [SetTitleGuard] },
+      { path: 'dropdown', component: DropDownComponent, data: { title: 'demo-dropdown' }, canActivate: [SetTitleGuard] },
+      { path: 'pager', component: PagerComponent, data: { title: 'demo-pager' }, canActivate: [SetTitleGuard] },
+      { path: 'dialog', component: DialogComponent, data: { title: 'demo-dialog' }, canActivate: [SetTitleGuard] },
+      { path: 'pipe', component: PipeComponent, data: { title: 'demo-pipe' }, canActivate: [SetTitleGuard] },
+      { path: 'animation', component: AnimationComponent, data: { title: 'animation' }, canActivate: [SetTitleGuard] },
+    ], data: {title: 'index'}, canActivate: [SetTitleGuard]
+  },
 ];
 
 @NgModule({

@@ -1,3 +1,18 @@
+<nav class="main-navigation">
+  <a href="" [class.active]="isActiveRoute('/demo')" routerLink='/demo'>Index</a>
+  <a href="" [class.active]="isActiveRoute('/demo/button')" routerLink='button'>button</a>
+  <a href="" [class.active]="isActiveRoute('/demo/checkstyle')" routerLink='checkstyle'>checkstyle</a>
+  <a href="" [class.active]="isActiveRoute('/demo/dropdown')" routerLink='dropdown'>dropdown</a>
+  <a href="" [class.active]="isActiveRoute('/demo/pager')" routerLink='pager'>pager</a>
+  <a href="" [class.active]="isActiveRoute('/demo/dialog')" routerLink='dialog'>dialog</a>
+  <a href="" [class.active]="isActiveRoute('/demo/pipe')" routerLink='pipe'>pipe</a>
+  <a href="" [class.active]="isActiveRoute('/demo/animation')" routerLink='animation'>animation</a>
+</nav>
+
 <div class="loading-stage" @loadingAnimation *ngIf="!ready">
   <div class="text"> loading ({{ percentage }}%)</div>
+</div>
+
+<div class="demo-container">
+  <router-outlet></router-outlet>
 </div>

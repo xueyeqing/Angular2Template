@@ -66,5 +66,15 @@ export class IndexComponent implements OnInit {
     }
   }
 
+  get activeRoutePath(): string {
+    return this._router.url;
+  }
+
+  isActiveRoute(path: string) {
+    if (path.length > 1) {
+      return this.activeRoutePath === path;
+    }
+  }
+
 
 }

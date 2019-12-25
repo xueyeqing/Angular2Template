@@ -17,30 +17,6 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {
   }
 
-  toCheckStyle() {
-    this.router.navigateByUrl('/demo/checkstyle')
-  }
-
-  toDropDown() {
-    this.router.navigateByUrl('/demo/dropdown')
-  }
-
-  toPager() {
-    this.router.navigateByUrl('/demo/pager')
-  }
-
-  toDialog() {
-    this.router.navigateByUrl('/demo/dialog')
-  }
-
-  toPipe() {
-    this.router.navigateByUrl('/demo/pipe')
-  }
-
-  toAnimation() {
-    this.router.navigateByUrl('/demo/animation')
-  }
-
   changeTheme() {
     this.showDefault = !this.showDefault;
   }

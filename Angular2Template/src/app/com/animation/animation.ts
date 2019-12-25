@@ -68,6 +68,10 @@ export const countAnimation = trigger('count',[
   ])
 ]);
 
+/**
+ * 进度 百分比加载
+ * @type {AnimationTriggerMetadata}
+ */
 export const loadingAnimation = trigger('loadingAnimation', [
   transition(':enter', [
     query('.text', [
