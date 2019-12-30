@@ -84,5 +84,14 @@
 ```html
 <span  appDebounceClick (debounceClick)="xxx">xxx</span>
 ```
+
+## 7、监听键盘事件
+> ### app => com => service => keyborad.service.ts 
+```
+    this._keydownBinding = new KeyboardBinding([Keys.KEY_UP, Keys.KEY_DOWN], keyCode => {
+      if (keyCode === Keys.KEY_UP) {} else if (keyCode === Keys.KEY_DOWN) {}
+    });
+```
+
 ## 实例：  
 - http://localhost:8888/Template/demo/button  

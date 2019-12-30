@@ -9,10 +9,13 @@ import {DialogComponent} from "./dialog/dialog.component";
 import {PipeComponent} from "./pipe/pipe.component";
 import {AnimationComponent} from "./animation/animation.component";
 import {IndexComponent} from "./index/index.component";
+import {BaseComponent} from "./base/base.component";
 
 const routes: Routes = [
+  {path: '', redirectTo:'base'},
   {
     path: '', component: IndexComponent, children: [
+      { path: 'base', component: BaseComponent, data: { title: 'base' }, canActivate: [SetTitleGuard] },
       { path: 'button', component: ButtonComponent, data: { title: 'demo-button' }, canActivate: [SetTitleGuard] },
       { path: 'checkstyle', component: CheckStyleComponent, data: { title: 'demo-check-style' }, canActivate: [SetTitleGuard] },
       { path: 'dropdown', component: DropDownComponent, data: { title: 'demo-dropdown' }, canActivate: [SetTitleGuard] },
