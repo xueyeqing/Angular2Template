@@ -1,7 +1,7 @@
 <div class="basics-area">
   <section class="basics-intro">
-    <div class="content-area"  [@contentAnimation]="section" (@contentAnimation.done)="visibleSection=section">
-      <div class="inner-section" [class.visible]="visibleSection==sections.intro" (click)="onInnerSectionClick(sections.intro)">
+    <div class="content-area"  [@contentAnimation]="section">
+      <div class="inner-section" [class.visible]="visibleSection==sections.intro">
         <div class="details">
           <h2>One Angular Animation</h2>
           <h2>One Angular Animation</h2>
@@ -9,7 +9,7 @@
           <h2>键盘上下键可切换内容</h2>
         </div>
       </div>
-      <div class="inner-section" [class.visible]="visibleSection==sections.triggers" (click)="onInnerSectionClick(sections.triggers)">
+      <div class="inner-section" [class.visible]="visibleSection==sections.triggers">
         <div class="details">
           <h2>Two Angular Animation</h2>
           <h2>Two Angular Animation</h2>
@@ -17,7 +17,7 @@
           <h2>键盘上下键可切换内容</h2>
         </div>
       </div>
-      <div class="inner-section" [class.visible]="visibleSection==sections.component" (click)="onInnerSectionClick(sections.component)">
+      <div class="inner-section" [class.visible]="visibleSection==sections.component">
         <div class="details">
           <h2>Three Angular Animation</h2>
           <h2>Three Angular Animation</h2>
@@ -25,7 +25,7 @@
           <h2>键盘上下键可切换内容</h2>
         </div>
       </div>
-      <div class="inner-section" [class.visible]="visibleSection==sections.animateStyle" (click)="onInnerSectionClick(sections.animateStyle)">
+      <div class="inner-section" [class.visible]="visibleSection==sections.animateStyle">
         <div class="details">
           <h2>Four Angular Animation</h2>
           <h2>Four Angular Animation</h2>
@@ -33,7 +33,7 @@
           <h2>键盘上下键可切换内容</h2>
         </div>
       </div>
-      <div class="inner-section" [class.visible]="visibleSection==sections.insertionRemoval" (click)="onInnerSectionClick(sections.insertionRemoval)">
+      <div class="inner-section" [class.visible]="visibleSection==sections.insertionRemoval">
         <div class="details">
           <h2>Five Angular Animation</h2>
           <h2>Five Angular Animation</h2>
@@ -41,7 +41,7 @@
           <h2>Five Angular Animation</h2>
         </div>
       </div>
-      <div class="inner-section" [class.visible]="visibleSection==sections.animationCallback" (click)="onInnerSectionClick(sections.animationCallback)">
+      <div class="inner-section" [class.visible]="visibleSection==sections.animationCallback">
         <div class="details">
           <h2>Six Angular Animation</h2>
           <h2>Six Angular Animation</h2>

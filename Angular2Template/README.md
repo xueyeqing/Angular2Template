@@ -92,6 +92,25 @@
       if (keyCode === Keys.KEY_UP) {} else if (keyCode === Keys.KEY_DOWN) {}
     });
 ```
+扩展：
+```html
+    import {fromEvent} from "rxjs/internal/observable/fromEvent";
+    import {debounceTime} from "rxjs/operators";
+
+    // 监听页面大小变化
+    fromEvent(window, 'resize').subscribe((event) => {});
+    
+    // 监听页面刷新
+    fromEvent(window, 'beforeunload').subscribe((event) => {});
+    
+    // 监听滚轮事件
+    this.subscribeScroll = fromEvent(window, 'mousewheel')
+    .pipe(debounceTime(10))
+    .subscribe((event) => {
+      // TODO
+    });
+    
+```
 
 ## 实例：  
 - http://localhost:8888/Template/demo/button  
