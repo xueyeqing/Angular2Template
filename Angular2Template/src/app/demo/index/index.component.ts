@@ -70,11 +70,14 @@ export class IndexComponent implements OnInit {
     return this._router.url;
   }
 
-  isActiveRoute(path: string) {
-    if (path.length > 1) {
+  isActiveRoute(path?: string) {
+    if(!path) {
+      if(this.activeRoutePath == '/demo/routing/page1' || this.activeRoutePath == '/demo/routing/page2' || this.activeRoutePath == '/demo/routing/page3' ||
+        this.activeRoutePath == '/demo/routing/page4' || this.activeRoutePath == '/demo/routing/page5') {
+        return true;
+      }
+    } else if (path.length > 1) {
       return this.activeRoutePath === path;
     }
   }
-
-
 }

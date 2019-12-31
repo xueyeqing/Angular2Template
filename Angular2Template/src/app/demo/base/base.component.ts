@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {KeyboardBinding, Keys} from "../../com/service/keyboard.service";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {fromEvent} from "rxjs/internal/observable/fromEvent";
@@ -96,18 +96,11 @@ export class BaseComponent implements OnInit, OnDestroy, AfterViewInit {
   up() {
     this.section = Math.max(this.section - 1, 1);
     this.NUM = 0;
-    // ================变更检测
-    // if (!this.cd['destroyed']) {
-    //   this.cd.detectChanges();
-    // }
   }
 
   down() {
     this.section = Math.min(this.section + 1, Object.keys(SECTIONS).length);
     this.NUM = 0;
-    // if (!this.cd['destroyed']) {
-    //   this.cd.detectChanges();
-    // }
   }
 
   isActive(value: number) {
