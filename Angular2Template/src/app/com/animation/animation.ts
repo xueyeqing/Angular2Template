@@ -1,6 +1,7 @@
-import {animate, group, keyframes, query, state, style, transition, trigger} from "@angular/animations";
+import {animate, animateChild, group, keyframes, query, state, style, transition, trigger} from "@angular/animations";
 
 const ELASTIC_BEZIER = 'cubic-bezier(.26,1.96,.58,.61)';
+const NICE_EASING = 'cubic-bezier(0.35, 0, 0.25, 1)';
 
 /**
  * 路由转场动画
@@ -23,6 +24,64 @@ export const slideToRightAnimation =
       animate('.5s ease-in-out', style({ transform: 'translate3d(100%,0,0)' }))
     ])
   ]);
+
+/**
+ * 路由转场动画
+ * @type {AnimationTriggerMetadata}
+ */
+
+const SHARED_ANIMATION_STYLES = [
+  style({ position: 'relative', height: '!' }),
+  query(':enter, :leave', [
+    style({ position: 'absolute', left: 0, top: 0, width: '100%' })
+  ]),
+  query(':enter', style({ opacity: 0 }))
+];
+export const routerAnimationsLR = trigger('routerAnimationsLR',[
+  transition(':enter', []),
+  transition(':increment', [
+    ...SHARED_ANIMATION_STYLES,
+    query(':enter', [
+      style({ opacity: 0, transform: 'translateX(100%)' }),
+    ]),
+    query(':leave', [
+      animateChild(),
+    ]),
+    group([
+      query(':leave', [
+        animate('1s ' + NICE_EASING, style({ transform: 'translateX(-100%)', opacity: 0}))
+      ]),
+      query(':enter', [
+        animate('0.5s 0.1s ' + NICE_EASING, style({ opacity: 1, transform: 'none' })),
+      ]),
+      query(':enter', [
+        animateChild()
+      ], { delay: '500ms' })
+    ]),
+  ]),
+  transition(':decrement', [
+    ...SHARED_ANIMATION_STYLES,
+    query(':enter', [
+      style({ opacity: 0, transform: 'translateX(-100%)' }),
+    ]),
+    query(':leave', [
+      animateChild(),
+    ]),
+    group([
+      query(':leave', [
+        animate('1s ' + NICE_EASING, style({ transform: 'translateX(100%)', opacity: 0 }))
+      ]),
+      query(':enter', [
+        animate('0.5s 0.1s ' + NICE_EASING, style({ opacity: 1, transform: 'none' })),
+      ]),
+      query(':enter', [
+        animateChild()
+      ], { delay: '500ms' })
+    ])
+  ]),
+]);
+
+export const viewAnimation = trigger('viewAnimation', []);
 
 /**
  * 淡入淡出
@@ -85,4 +144,4 @@ export const loadingAnimation = trigger('loadingAnimation', [
     ]),
     animate('300ms', style({ opacity: 0 }))
   ])
-])
+]);

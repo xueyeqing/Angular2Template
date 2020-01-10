@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router, RouterOutlet} from "@angular/router";
 import {KeyboardBinding, Keys} from "../../com/service/keyboard.service";
+import {routerAnimationsLR} from "../../com/animation/animation";
 
 const PAGES = [
   '/demo/routing/page1',
@@ -13,7 +14,8 @@ const PAGES = [
 @Component({
   selector: 'demo-routing-page',
   templateUrl: './routing-page.component.html',
-  styleUrls: ['./routing-page.component.less']
+  styleUrls: ['./routing-page.component.less'],
+  animations: [routerAnimationsLR]
 })
 export class RoutingPageComponent implements OnInit {
 
@@ -35,7 +37,7 @@ export class RoutingPageComponent implements OnInit {
   left() {
     const currentUrl = this._router.url;
     const index = PAGES.indexOf(currentUrl);
-    const nextIndex = Math.max(index-1,0);
+    const nextIndex = Math.max(index - 1, 0);
     const url = PAGES[nextIndex];
     this._navigate(url);
   }
@@ -43,7 +45,7 @@ export class RoutingPageComponent implements OnInit {
   right() {
     const currentUrl = this._router.url;
     const index = PAGES.indexOf(currentUrl);
-    const nextIndex = Math.min(index+1,PAGES.length - 1);
+    const nextIndex = Math.min(index + 1, PAGES.length - 1);
     const url = PAGES[nextIndex];
     this._navigate(url);
   }
@@ -56,6 +58,10 @@ export class RoutingPageComponent implements OnInit {
     let path = '/demo/routing';
     path += `/page${num}`;
     return this._router.url === path;
+  }
+
+  prepRouteTransition(outlet: RouterOutlet) {
+    return outlet.activatedRouteData['animation'] || '';
   }
 
 
