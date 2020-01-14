@@ -1,12 +1,18 @@
 import {Component, HostBinding, HostListener, OnInit} from '@angular/core';
 
-import {slideToRightAnimation, cardAnim, visibilityAnimation, countAnimation} from '../../com/animation/animation';  //引入滑动页面的效果
+import {
+  slideToRightAnimation,
+  cardAnim,
+  visibilityAnimation,
+  countAnimation,
+  widthAnimation
+} from '../../com/animation/animation';  //引入滑动页面的效果
 
 @Component({
   selector: 'demo-animation',
   templateUrl: './animation.component.html',
   styleUrls: ['./animation.component.less'],
-  animations: [slideToRightAnimation, visibilityAnimation, cardAnim, countAnimation]
+  animations: [slideToRightAnimation, visibilityAnimation, cardAnim, countAnimation, widthAnimation]
 })
 export class AnimationComponent implements OnInit {
 
@@ -14,6 +20,7 @@ export class AnimationComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
 
   visibility = 'shown';
+  widthChangeState = 'open';
   isVisible: boolean = true;
 
   constructor() {
@@ -25,6 +32,8 @@ export class AnimationComponent implements OnInit {
   changeAnimation() {
     this.isVisible = !this.isVisible;
     this.visibility = this.isVisible ? 'shown' : 'hidden';
+
+    this.widthChangeState = this.isVisible ? 'open' : 'close';
   }
 
   cardState = 'out';

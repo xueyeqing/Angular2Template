@@ -85,7 +85,7 @@
 ## 6、防二次重复点击 （指令）
 > ### app => com => debounce-click.directive.ts
 ```html
-<span  appDebounceClick (debounceClick)="xxx">xxx</span>
+<span appDebounceClick (debounceClick)="xxx">xxx</span>
 ```
 
 ## 7、监听键盘事件
