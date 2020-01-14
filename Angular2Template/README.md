@@ -79,7 +79,12 @@
       * 表示任何状态
       void => * 表示入场。
       * => void 表示出场。
-      当然入场你也可以用:enter代替，出场可以用:leave代替。
+      当然入场你也可以用:enter代替，出场可以用:leave代替。即
+      transition('* => void', animate...)  也等于 :leave
+      transition('void => *', animate...)  也等于 :enter
+      
+      transition('A => B',[animate,animate]) 数组 animate 会按序执行和 transition('A => B', sequence([animate,animate])) 是一样的 
+      transition('A => B',group([animate,animate])) 不想按序执行可以使用 group,表示里的动画同时进行。
 
 
 ## 6、防二次重复点击 （指令）
