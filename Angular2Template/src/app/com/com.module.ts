@@ -11,6 +11,7 @@ import {DialogComponent} from './dialog/dialog.component';
 import { IdNumberPipe } from './pipe/id-number.pipe';
 import { PhonePipe } from './pipe/phone.pipe';
 import { StringNumPipe } from './pipe/string-num.pipe';
+import {ScrollDirective} from "./scroll.directive";
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { StringNumPipe } from './pipe/string-num.pipe';
     DialogComponent,
     IdNumberPipe,
     PhonePipe,
-    StringNumPipe
+    StringNumPipe,
+    ScrollDirective
   ],
   exports: [
     ClickOutsideDirective,
@@ -39,7 +41,8 @@ import { StringNumPipe } from './pipe/string-num.pipe';
     DialogComponent,
     IdNumberPipe,
     PhonePipe,
-    StringNumPipe
+    StringNumPipe,
+    ScrollDirective
   ]
 })
 export class ComModule {
