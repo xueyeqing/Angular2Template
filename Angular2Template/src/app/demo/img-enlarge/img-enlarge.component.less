@@ -1,0 +1,47 @@
+.img-one, .img-two {
+  position: absolute;
+  top: 120px;
+  box-shadow: 4px 4px 10px 0 #616161;
+  img {
+    margin:0;
+    padding:0;
+    -webkit-user-select:none;
+    border:none;
+  }
+}
+
+.img-one {
+  img {
+    background: url("./image/one.png") no-repeat;
+    background-size: 100% 100%;
+    width:480px;
+    height:300px;
+  }
+}
+.img-two {
+  display:none;
+  left:560px;
+  overflow:hidden;
+  width: 480px;
+  height: 300px;
+  img {
+    background: url("./image/two.png") no-repeat;
+    background-size: 100% 100%;
+    display:block;
+    width:960px;
+    height:600px;
+  }
+}
+
+#mark {
+  display:none;
+  position:absolute;
+  top:50px;
+  left:50px;
+  width:100px;
+  height:100px;
+  opacity:0.4;
+  filter:alpha(opacity=40);
+  cursor:move;
+  background-color:#000;
+}
