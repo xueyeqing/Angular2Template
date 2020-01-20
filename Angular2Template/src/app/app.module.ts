@@ -8,6 +8,7 @@ import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import {MessageService} from "./com/service/message.service";
 import {DialogService} from "./com/service/dialog.service";
+import {NgxEchartsModule} from "ngx-echarts";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {DialogService} from "./com/service/dialog.service";
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxEchartsModule
   ],
   providers: [MessageService, DialogService],
   bootstrap: [AppComponent]

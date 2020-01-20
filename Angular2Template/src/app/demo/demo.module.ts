@@ -21,19 +21,21 @@ import {Page4Component} from "./routing-page/page4/page4.component";
 import {Page5Component} from "./routing-page/page5/page5.component";
 import {TableComponent} from './table/table.component';
 import {ImgEnlargeComponent} from "./img-enlarge/img-enlarge.component";
-import { TooltipComponent } from './tooltip/tooltip.component';
+import {TooltipComponent} from './tooltip/tooltip.component';
+import {EChartComponent} from './echart/echart.component';
+import {NgxEchartsModule} from "ngx-echarts";
 
 @NgModule({
   declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent,
     PipeComponent, AnimationComponent, ProjectItemComponent, IndexComponent, BaseComponent,
     RoutingPageComponent, Page1Component, Page2Component, Page3Component, Page4Component, Page5Component, TableComponent,
-    ImgEnlargeComponent,
-    TooltipComponent],
+    ImgEnlargeComponent, TooltipComponent, EChartComponent],
   imports: [
     CommonModule,
     DemoRoutingModule,
     ComModule,
-    FormsModule
+    FormsModule,
+    NgxEchartsModule
   ]
 })
 export class DemoModule {

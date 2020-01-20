@@ -154,5 +154,28 @@ window.onscroll = function () {
 ## 9、放大镜功能 
 ![](https://github.com/xueyeqing/Angular2Template/blob/master/Angular2Template/src/app/demo/img-enlarge/image/d.png)
 
+## 10、EChart
+> 安装
+```
+    npm install echarts --save 
+    npm install ngx-echarts --save
+```
+
+> 项目中引入echarts
+```
+    // angular.json 文件
+    "scripts": [
+       "node_modules/echarts/dist/echarts.min.js"
+    ]
+```
+> 引入ngx-echarts模块
+```
+    // app.modules.ts
+    imports: [NgxEchartsModule],
+```
+> 使用
+```
+```
+
 ## 实例：  
 - http://localhost:8888/Template/demo
