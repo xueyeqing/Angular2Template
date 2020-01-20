@@ -14,7 +14,6 @@ export class TooltipComponent implements OnInit {
   @Input() leftClass: boolean = false;
   @Input() tipContent: string = '';
   @Input() content: string = '';
-  @Input() width: string = '180px';
 
   constructor() { }
 
