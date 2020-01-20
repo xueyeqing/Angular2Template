@@ -18,6 +18,7 @@ import {Page4Component} from './routing-page/page4/page4.component';
 import {Page5Component} from "./routing-page/page5/page5.component";
 import {TableComponent} from "./table/table.component";
 import {ImgEnlargeComponent} from "./img-enlarge/img-enlarge.component";
+import {TooltipComponent} from "./tooltip/tooltip.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'base'},
@@ -38,6 +39,7 @@ const routes: Routes = [
       {path: 'animation', component: AnimationComponent, data: {title: 'animation'}, canActivate: [SetTitleGuard]},
       {path: 'table', component: TableComponent, data: {title: 'table'}, canActivate: [SetTitleGuard]},
       {path: 'enlarge', component: ImgEnlargeComponent, data: {title: 'enlarge'}, canActivate: [SetTitleGuard]},
+      {path: 'tooltip', component: TooltipComponent, data: {title: 'tooltip'}, canActivate: [SetTitleGuard]},
       {
         path: 'routing', component: RoutingPageComponent,
         children: [

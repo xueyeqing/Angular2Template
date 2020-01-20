@@ -152,7 +152,7 @@ window.onscroll = function () {
 ```
 
 ## 9、放大镜功能 
-![](https://github.com/xueyeqing/Angular2Template/tree/master/Angular2Template/src/app/demo/img-enlarge/image/d.png)
+![](https://github.com/xueyeqing/Angular2Template/blob/master/Angular2Template/src/app/demo/img-enlarge/image/d.png)
 
 ## 实例：  
 - http://localhost:8888/Template/demo
