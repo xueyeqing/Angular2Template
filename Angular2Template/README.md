@@ -154,7 +154,13 @@ window.onscroll = function () {
 ## 9、放大镜功能 
 ![](https://github.com/xueyeqing/Angular2Template/blob/master/Angular2Template/src/app/demo/img-enlarge/image/d.png)
 
-## 10、EChart
+## 10、table
+  头部固定，上下滚动
+  左右滚动
+  左固定
+  上固定+左固定
+
+## 11、EChart
 > 安装
 ```
     npm install echarts --save 
