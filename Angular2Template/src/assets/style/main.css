@@ -84,6 +84,11 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset !importa
   color: #444;
 }
 
+.table thead[name='thead3-l'] tr th:last-child, .table tbody[name='tbody3-l'] tr td:last-child,
+.table thead[name='thead4-l'] tr th:last-child, .table tbody[name='tbody4-l'] tr td:last-child {
+  border-right: none;
+} 
+
 .ofy-scroll {
   overflow-y: scroll;
 }
