@@ -59,3 +59,45 @@ input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset !importa
     transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
     -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
 }
+
+/* table */
+.table {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #d8d8d8;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+  
+.table td, .table th {
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  color: #777;
+  border: 1px solid #d8d8d8;
+  word-break: break-all;
+  word-wrap:break-word;
+}
+  
+.table th {
+  background: #d0eef9;
+  color: #444;
+}
+
+.ofy-scroll {
+  overflow-y: scroll;
+}
+
+.of-auto {
+  overflow: auto;
+}
+
+.of-hidden {
+  overflow: hidden;
+}
+
+.border-none {
+  border: none;
+}
+
+/* table */

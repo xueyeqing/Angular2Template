@@ -155,11 +155,11 @@ window.onscroll = function () {
 ![](https://github.com/xueyeqing/Angular2Template/blob/master/Angular2Template/src/app/demo/img-enlarge/image/d.png)
 
 ## 10、table
-  头部固定，上下滚动
-  左右滚动
-  左固定
-  上固定+左固定
-
+- type:1 上固定上下滚动;  
+- type:2 左右滚动;  
+- type:3 左固定;  
+- type:4 上固定+左固定;
+ 
 ## 11、EChart
 > 安装
 ```

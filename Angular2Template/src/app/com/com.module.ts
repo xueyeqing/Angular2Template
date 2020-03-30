@@ -13,6 +13,7 @@ import { PhonePipe } from './pipe/phone.pipe';
 import { StringNumPipe } from './pipe/string-num.pipe';
 import {ScrollDirective} from "./scroll.directive";
 import { TooltipComponent } from './tooltip/tooltip.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     PhonePipe,
     StringNumPipe,
     ScrollDirective,
-    TooltipComponent
+    TooltipComponent,
+    TableComponent
   ],
   exports: [
     ClickOutsideDirective,
@@ -45,7 +47,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     PhonePipe,
     StringNumPipe,
     ScrollDirective,
-    TooltipComponent
+    TooltipComponent,
+    TableComponent
   ]
 })
 export class ComModule {

@@ -1,0 +1,67 @@
+<!-- 上固定上下滚动  -->
+<div *ngIf="type==1" class="com-table">
+    <div class="ofy-scroll">
+        <table class="table">
+            <ng-content select="[name=thead]"></ng-content>
+        </table>
+    </div>
+    
+    <div class="ofy-scroll" [ngStyle]="{'height': height?height +'px':'100%'}">
+        <table class="table">
+            <ng-content select="[name=tbody]"></ng-content>
+        </table>
+    </div>    
+</div>
+
+<!-- 左右滚动 -->
+<div *ngIf="type==2" class="com-table of-auto" [ngStyle]="{'width': width?width +'px':'100%'}">
+    <table class="table">
+        <ng-content select="[name=thead2]"></ng-content>
+        <ng-content select="[name=tbody2]"></ng-content>
+    </table>
+</div>
+
+<!-- 左固定 --> 
+<div *ngIf="type==3" class="com-table of-hidden" style="display: flex;flex-direction: row;" [ngStyle]="{'width': width?width +'px':'100%'}">
+    <div [ngStyle]="{'width': widthPercentL}">
+        <table class="table border-none">
+            <ng-content select="[name=thead3-l]"></ng-content>
+            <ng-content select="[name=tbody3-l]"></ng-content>
+        </table>
+    </div>
+    <div class="of-auto" [ngStyle]="{'width': widthPercentR}">
+        <table class="table border-none">
+            <ng-content select="[name=thead3-r]"></ng-content>
+            <ng-content select="[name=tbody3-r]"></ng-content>
+        </table>
+    </div>
+</div>
+
+<!-- 上固定+左固定 -->
+<div *ngIf="type==4" class="com-table" style="display: flex;flex-direction: row;" [ngStyle]="{'width': width?width +'px':'100%'}">
+    <div [ngStyle]="{'width': widthPercentL}" style="z-index: 999;">
+        <div>
+          <table class="table border-none">
+            <ng-content select="[name=thead4-l]"></ng-content>
+          </table>
+        </div>
+        <div [ngStyle]="{'max-height': maxHeight?maxHeight +'px':'100%'}" style="top: 0;overflow-x: scroll;overflow-y: hidden;" id="result-table-left">
+          <table class="table border-none">
+            <ng-content select="[name=tbody4-l]"></ng-content>
+          </table>
+        </div>
+      </div>
+  
+      <div [ngStyle]="{'width': widthPercentR}">
+        <div style="overflow-y: scroll;overflow-x: hidden;" id="result-table-head">
+          <table class="table">
+            <ng-content select="[name=thead4-r]"></ng-content>
+          </table>
+        </div>
+        <div [ngStyle]="{'max-height': maxHeight?maxHeight +'px':'100%'}" class="ofy-scroll" appScroll (scrollChange)="onScrollChange($event)" id="result-table-body">
+          <table class="table">
+            <ng-content select="[name=tbody4-r]"></ng-content>
+          </table>
+        </div>
+    </div>
+</div>
