@@ -84,10 +84,12 @@
               ]
             },
             "test": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.test.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -162,6 +164,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular2Template"
+    }
+  },
+  "defaultProject": "Angular2Template",
+  "cli": {
+    "analytics": "056df612-474f-43a0-9f32-3417cc29a631"
+  }
 }

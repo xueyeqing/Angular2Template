@@ -82,4 +82,15 @@ export class DialogComponent implements OnInit {
       this.dialog.close()
     },2000)
   }
+
+  openDialog6() {
+    this.dialog.confirm({
+      key: 'six',
+      width: 450,
+      height: 50,
+      marginTop: 0,
+      delay: 2000
+    });
+  }
+
 }
