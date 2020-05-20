@@ -20,6 +20,7 @@ import {TableComponent} from "./table/table.component";
 import {ImgEnlargeComponent} from "./img-enlarge/img-enlarge.component";
 import {TooltipComponent} from "./tooltip/tooltip.component";
 import {EChartComponent} from "./echart/echart.component";
+import { StatusComponent } from './status/status.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'base'},
@@ -42,6 +43,8 @@ const routes: Routes = [
       {path: 'enlarge', component: ImgEnlargeComponent, data: {title: 'enlarge'}, canActivate: [SetTitleGuard]},
       {path: 'tooltip', component: TooltipComponent, data: {title: 'tooltip'}, canActivate: [SetTitleGuard]},
       {path: 'echart', component: EChartComponent, data: {title: 'echart'}, canActivate: [SetTitleGuard]},
+      {path: 'status', component: StatusComponent, data: {title: 'status'}, canActivate: [SetTitleGuard]},
+
       {
         path: 'routing', component: RoutingPageComponent,
         children: [

@@ -14,6 +14,7 @@ import { StringNumPipe } from './pipe/string-num.pipe';
 import {ScrollDirective} from "./scroll.directive";
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { TableComponent } from './table/table.component';
+import { StatusComponent } from './status/status.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { TableComponent } from './table/table.component';
     StringNumPipe,
     ScrollDirective,
     TooltipComponent,
-    TableComponent
+    TableComponent,
+    StatusComponent
   ],
   exports: [
     ClickOutsideDirective,
@@ -48,7 +50,8 @@ import { TableComponent } from './table/table.component';
     StringNumPipe,
     ScrollDirective,
     TooltipComponent,
-    TableComponent
+    TableComponent,
+    StatusComponent
   ]
 })
 export class ComModule {

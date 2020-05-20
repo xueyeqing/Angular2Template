@@ -1,0 +1,52 @@
+@status-red: #f66f6a; // 错误，失败，危险操作告警色
+@status-yellow: #fac20a; // 提示信息
+@status-green: #50d4ab; // 成功，批准
+@status-blue: #5e7ce0; // 运行中，正常
+@status-initial: #e9edfa; // 初始化
+@status-unavaliable: #f5f5f6; // 失效，等待，回退， 中止
+
+:host {
+    display: block;
+}
+
+.com-status {
+    line-height: 20px;
+    display: inline-block;
+    height: 20px;
+    &::before {
+        display: inline-block;
+        content: '';
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+        border-radius: 100%;
+    }
+
+    &.com-status-bg-success::before {
+        background: @status-green;
+    }
+
+    &.com-status-bg-error::before {
+        background: @status-red;
+    }
+
+    &.com-status-bg-warning::before {
+        background: @status-yellow;
+    }
+
+    &.com-status-bg-waiting::before {
+        background: #9faad7;
+    }
+
+    &.com-status-bg-running::before {
+        background: @status-blue;
+    }
+
+    &.com-status-bg-invalid::before {
+        background: @status-unavaliable;
+    }
+
+    &.com-status-bg-initial::before {
+        background: @status-initial;
+    }
+}
