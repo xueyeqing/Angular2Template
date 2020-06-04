@@ -183,5 +183,20 @@ window.onscroll = function () {
 ```
 ```
 
+## Anchor锚点使用说明
+
+- dAnchor指令
+
+  定义一个锚点
+
+- dAnchorLink指令
+
+  定义一个锚点的链接，点击链接会滑动到锚点，锚点处于页面顶部的时候也会激活链接的class
+
+
+- dAnchorBox指令 （必须有一个容器，否则功能无法使用）
+
+  定义一个扫描锚点的容器，放在dAnchor与dAnchorLink的公共父节点上，用于锚点和链接之间的通信
+
 ## 实例：  
 - http://localhost:8888/Template/demo

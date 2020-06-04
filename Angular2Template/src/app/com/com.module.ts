@@ -15,6 +15,7 @@ import {ScrollDirective} from "./scroll.directive";
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { TableComponent } from './table/table.component';
 import { StatusComponent } from './status/status.component';
+import { StickyComponent } from './sticky/sticky.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { StatusComponent } from './status/status.component';
     ScrollDirective,
     TooltipComponent,
     TableComponent,
-    StatusComponent
+    StatusComponent,
+    StickyComponent
   ],
   exports: [
     ClickOutsideDirective,
@@ -51,7 +53,8 @@ import { StatusComponent } from './status/status.component';
     ScrollDirective,
     TooltipComponent,
     TableComponent,
-    StatusComponent
+    StatusComponent,
+    StickyComponent
   ]
 })
 export class ComModule {
