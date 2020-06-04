@@ -19,6 +19,7 @@ export class StickyComponent implements OnInit {
 
   @Input() scrollTarget;
   parentNode; // 当前sticky的父元素
+  containerLeft; // 用于监听是否是横向滚动
 
   @Output() statusChange: EventEmitter<StickyStatus> = new EventEmitter();
   @ViewChild('stickyWrapper', { static: true }) wrapper: any;
@@ -46,7 +47,6 @@ export class StickyComponent implements OnInit {
 
   ngOnInit() {
     this.parentNode = this.el.nativeElement.parentNode;
-    console.log(this.parentNode)
     if (!this.container) {
       this.container = this.parentNode;
     }
@@ -86,14 +86,16 @@ export class StickyComponent implements OnInit {
   }
 
   scrollAndResizeHock = () => {
-    this.scrollHandler();
+    if (this.container.getBoundingClientRect().left - (this.containerLeft || 0) !== 0) {
+      this.status = 'stay';
+      this.containerLeft = this.container.getBoundingClientRect().left;
+    } else {
+      this.scrollHandler();
+    }
   }
 
   scrollHandler = () => {
     const computedStyle = window.getComputedStyle(this.container);
-
-    console.log(this.parentNode.getBoundingClientRect().top,this.container.getBoundingClientRect().top);
-
     if (this.parentNode.getBoundingClientRect().top > (this.view && this.view.top || 0)) {
       this.status = 'normal';   // 全局滑动（container!==parentNode）时候增加预判
     } else if (this.container.getBoundingClientRect().top
