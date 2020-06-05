@@ -1,0 +1,27 @@
+<div style="padding: 60px;">
+    <div style="width: 1200px;height: 800px;border: 1px solid #ddd;margin: 0 auto;">
+
+        <!-- registerForm 变量是一个到 [NgForm] 指令的引用，它代表该表单的整体。 -->
+        <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+            <div class="mg10">
+                <input type="text" name="pwd" [(ngModel)]="user.pwd" required #pwd="ngModel" (keyup)="validatePwdEqual(registerForm)">
+                <div [hidden]="pwd.valid || pwd.pristine">
+                    <span style="color: red;" *ngIf="pwd?.errors?.required">不能为空</span>
+                  </div>
+            </div>
+            <div class="mg10">
+                <input type="text" name="confirmpwd" [(ngModel)]="user.confirmPwd" required #confirmpwd="ngModel" 
+                validatePwdEqual [password]="user.pwd">
+
+                <div [hidden]="confirmpwd.valid || confirmpwd.pristine">
+                    <span style="color: red;" *ngIf="confirmpwd?.errors?.validatePwdEqual">{{confirmpwd.errors['validatePwdEqual']}}</span>
+                  </div>
+
+            </div>
+
+            <button class="mg10" type="submit">注册</button>
+
+        </form>
+
+    </div>
+</div>

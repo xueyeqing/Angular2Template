@@ -16,6 +16,7 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { TableComponent } from './table/table.component';
 import { StatusComponent } from './status/status.component';
 import { StickyComponent } from './sticky/sticky.component';
+import { PwdEqualValidatorDirective } from './pwd-equal-validator.directive';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { StickyComponent } from './sticky/sticky.component';
     TooltipComponent,
     TableComponent,
     StatusComponent,
-    StickyComponent
+    StickyComponent,
+    PwdEqualValidatorDirective
   ],
   exports: [
     ClickOutsideDirective,
@@ -54,7 +56,8 @@ import { StickyComponent } from './sticky/sticky.component';
     TooltipComponent,
     TableComponent,
     StatusComponent,
-    StickyComponent
+    StickyComponent,
+    PwdEqualValidatorDirective
   ]
 })
 export class ComModule {

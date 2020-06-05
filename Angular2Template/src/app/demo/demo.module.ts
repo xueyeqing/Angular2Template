@@ -27,12 +27,13 @@ import {NgxEchartsModule} from "ngx-echarts";
 import { StatusComponent } from './status/status.component';
 import { AnchorComponent } from './anchor/anchor.component';
 import { StickyComponent } from './sticky/sticky.component';
+import { FormDemoComponent } from './form-demo/form-demo.component';
 
 @NgModule({
   declarations: [ButtonComponent, CheckStyleComponent, DropDownComponent, PagerComponent, DialogComponent,
     PipeComponent, AnimationComponent, ProjectItemComponent, IndexComponent, BaseComponent,
     RoutingPageComponent, Page1Component, Page2Component, Page3Component, Page4Component, Page5Component, TableComponent,
-    ImgEnlargeComponent, TooltipComponent, EChartComponent, StatusComponent, AnchorComponent, StickyComponent],
+    ImgEnlargeComponent, TooltipComponent, EChartComponent, StatusComponent, AnchorComponent, StickyComponent, FormDemoComponent],
   imports: [
     CommonModule,
     DemoRoutingModule,

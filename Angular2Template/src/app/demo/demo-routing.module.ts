@@ -23,6 +23,7 @@ import {EChartComponent} from "./echart/echart.component";
 import { StatusComponent } from './status/status.component';
 import { AnchorComponent } from './anchor/anchor.component';
 import { StickyComponent } from './sticky/sticky.component';
+import { FormDemoComponent } from './form-demo/form-demo.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'base'},
@@ -48,6 +49,7 @@ const routes: Routes = [
       {path: 'status', component: StatusComponent, data: {title: 'status'}, canActivate: [SetTitleGuard]},
       {path: 'anchor', component: AnchorComponent, data: {title: 'anchor'}, canActivate: [SetTitleGuard]},
       {path: 'sticky', component: StickyComponent, data: {title: 'sticky'}, canActivate: [SetTitleGuard]},
+      {path: 'form', component: FormDemoComponent, data: {title: 'form'}, canActivate: [SetTitleGuard]},
       {
         path: 'routing', component: RoutingPageComponent,
         children: [
